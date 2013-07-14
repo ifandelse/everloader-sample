@@ -1,0 +1,26 @@
+<div data-role="view" id="share" data-layout="default" data-transition="overlay:down" class="share-view"
+    data-init="app.viewModels.addImage.init" data-show="app.viewModels.addImage.show" data-model="app.viewModels.addImage">
+    <header data-role="header">
+        <div data-role="navbar">
+            Image
+            <a class="nav-button" data-align="left" data-role="backbutton">Cancel</a>
+            <a class="nav-button" data-align="right" data-role="button" data-bind="click: saveItem">Add Image</a>
+        </div>
+    </header>
+    <div id="enterItem" class="share-form-wrp">
+        <form>
+            <ul data-role="listview" data-style="inset" id="add-image-form">
+                <li>
+                    <label data-align="left">Title
+                        <input type="text" id="newTitle" placeholder="Title" required validationMessage="Title is required!" data-bind="value: picTitle"/>    
+                    </label>                    
+                </li>
+                <li style="display: none">
+                    <input value="Browse" type="file" data-bind="events: { change: onPicSet }" id="newPicture" />
+                </li>
+                <li data-bind="invisible: picSelected"><a data-bind="click: onAddPic">Browse</a></li>
+                <li id="picName" data-bind="visible: picSelected"><span data-bind="html: picName"></span><a data-role="detailbutton" data-style="rowdelete" data-bind="click: onRemovePic"></a></li>
+            </ul>
+        </form>
+    </div>
+</div>

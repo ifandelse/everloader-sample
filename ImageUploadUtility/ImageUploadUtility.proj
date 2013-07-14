@@ -57,25 +57,6 @@
     <Resource Include="App_Resources\Android\drawable-nodpi\splashscreen.9.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="index.html" />
-    <Content Include="kendo\js\jquery.min.js" />
-    <Content Include="kendo\js\kendo.mobile.min.js" />
-    <Content Include="kendo\styles\images\back.png" />
-    <Content Include="kendo\styles\images\KendoUI.ttf" />
-    <Content Include="kendo\styles\images\KendoUI.woff" />
-    <Content Include="kendo\styles\kendo.mobile.all.min.css" />
-    <Content Include="scripts\app\main.js" />
-    <Content Include="scripts\app\identity-provider.js" />
-    <Content Include="scripts\lib\everlive.all.min.js" />
-    <Content Include="styles\images\app-bg.jpg" />
-    <Content Include="styles\images\avatar.png" />
-    <Content Include="styles\images\border.png" />
-    <Content Include="styles\images\sprite.png" />
-    <Content Include="styles\main.css" />
-    <Content Include="views\activitiesView.html" />
-    <Content Include="views\activityView.html" />
-    <Content Include="views\addActivityView.html" />
-    <Content Include="views\signupView.html" />
     <Content Include="cordova.ios.js">
       <Platform>iOS</Platform>
       <TargetName>cordova.js</TargetName>
@@ -84,6 +65,22 @@
       <Platform>Android</Platform>
       <TargetName>cordova.js</TargetName>
     </Content>
+    <Content Include="index.html" />
+    <Content Include="kendo\js\jquery.min.js" />
+    <Content Include="kendo\js\kendo.mobile.min.js" />
+    <Content Include="kendo\styles\images\back.png" />
+    <Content Include="kendo\styles\images\KendoUI.ttf" />
+    <Content Include="kendo\styles\images\KendoUI.woff" />
+    <Content Include="kendo\styles\kendo.mobile.all.min.css" />
+    <Content Include="scripts\app\everloader.js" />
+    <Content Include="scripts\app\main.js" />
+    <Content Include="scripts\lib\everlive.all.min.js" />
+    <Content Include="styles\images\app-bg.jpg" />
+    <Content Include="styles\images\avatar.png" />
+    <Content Include="styles\images\border.png" />
+    <Content Include="styles\images\sprite.png" />
+    <Content Include="styles\main.css" />
+    <Content Include="views\addImage.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Telerik\ICE\Tools\Mobile\MobileTools.targets" />
 </Project>
