@@ -38,15 +38,6 @@ var app = (function () {
     var el = new Everlive({
         apiKey: "wEx9wdnIcxxehNty"
     });
-    
-    // Lookup object we'll be using to map file
-    // extension to mime type values
-    var mimeMap = {
-        jpg  : "image/jpeg",
-        jpeg : "image/jpeg",
-        png  : "image/png",
-        gif  : "image/gif"
-    };
 
     var AppHelper = {
         // produces the 'download' url for a given
@@ -58,35 +49,6 @@ var app = (function () {
             }
             else {
                 return '';
-            }
-        },
-        // helper function to produce the base64
-        // for a given file input item
-        getBase64ImageFromInput : function (input, cb) {
-            var reader = new FileReader();
-            reader.onloadend = function (e) {
-                if (cb)
-                    cb(e.target.result);
-            };
-            reader.readAsDataURL(input);
-        },
-        // produces the appropriate object structure
-        // necessary for Everlive to store our file
-        getImageFileObject: function(input, cb) {
-            var name = input.name;
-            var ext = name.substr(name.lastIndexOf('.') + 1).toLowerCase();
-            var mimeType = mimeMap[ext];
-            if(mimeType) {
-                this.getBase64ImageFromInput(input, function(base64) {
-                    var res = {
-                        "Filename"    : name,
-                        "ContentType" : mimeType,              
-                        "base64"      : base64.substr(base64.lastIndexOf('base64,')+7)
-                    };
-                    cb(null, res);
-                });
-            } else {
-                cb("File type not supported: " + ext);    
             }
         }
     };
